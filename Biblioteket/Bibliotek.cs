@@ -22,7 +22,17 @@ namespace Biblioteket
 
         public string HentLaaner(int id)
         {
-            return $"Lånernummer: {laanere[id].laanerNummer} - Navn: {laanere[id].navn} er låner hos {biblioteksNavn}";
+            return $"Lånernummer: {laanere[id].laanerNummer} - Navn: {laanere[id].navn} er låner hos {biblioteksNavn}\n";
+        }
+
+        public string HentAlleLaanere()
+        {
+            string laanereString = "";
+            foreach (Laaner laaner in laanere)
+            {
+                laanereString += $"Lånernummer: {laaner.laanerNummer} - Navn: {laaner.navn} er låner hos {biblioteksNavn}";
+            }
+            return laanereString;
         }
 
     }
