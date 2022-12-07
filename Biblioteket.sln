@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1704.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteket", "Biblioteket\Biblioteket.csproj", "{88FBEF36-46B2-4B5E-B91E-5203E293136C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_Biblioteket", "UnitTest_Biblioteket\UnitTest_Biblioteket.csproj", "{5BF0F8B0-8DC3-41BB-A0D2-DA33A145552B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{88FBEF36-46B2-4B5E-B91E-5203E293136C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88FBEF36-46B2-4B5E-B91E-5203E293136C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88FBEF36-46B2-4B5E-B91E-5203E293136C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF0F8B0-8DC3-41BB-A0D2-DA33A145552B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF0F8B0-8DC3-41BB-A0D2-DA33A145552B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF0F8B0-8DC3-41BB-A0D2-DA33A145552B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF0F8B0-8DC3-41BB-A0D2-DA33A145552B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
