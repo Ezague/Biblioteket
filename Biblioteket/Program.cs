@@ -1,11 +1,11 @@
 ﻿namespace Biblioteket
-
 {
     class Program
     {
         public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Bibliotek bibliotek = new Bibliotek("Sønderborg Bibliotek");
+            Console.WriteLine(bibliotek.HentBibliotek());
         }
     }
 }
