@@ -1,16 +1,12 @@
-using System;
-
 namespace Biblioteket
 {
-    public class Laaner
+    public class Laaner : Person
     {
         public int laanerNummer { get; }
-        public string navn { get; }
 
-        public Laaner(int laanerNummer, string navn)
+        public Laaner(int laanerNummer, string navn, string email) : base(navn, email)
         {
             this.laanerNummer = laanerNummer;
-            this.navn = navn;
         }
 
     }

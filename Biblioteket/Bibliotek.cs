@@ -15,24 +15,20 @@ namespace Biblioteket
             return "Velkommen til " + biblioteksNavn + "- datoen idag er: " + DateTime.Now.ToShortDateString();
         }
 
-        public string OpretLaaner(int laanerNummer, string navn)
+        public string OpretLaaner(int laanerNummer, string navn, string email)
         {
-            Laaner laaner = new Laaner(laanerNummer, navn);
+            Laaner laaner = new Laaner(laanerNummer, navn, email);
             laanere.Add(laaner);
-            return $"Lånernummer: {laanerNummer} - Navn: {navn} er oprettet hos {biblioteksNavn}\n";
+            return $"Lånernummer: {laanerNummer} - Navn: {navn} - Email: {email} er oprettet hos {biblioteksNavn}\n";
         }
 
-        public string HentLaaner(int id)
-        {
-            return $"Lånernummer: {laanere[id].laanerNummer} - Navn: {laanere[id].navn} er låner hos {biblioteksNavn}\n";
-        }
 
         public string HentAlleLaanere()
         {
             string laanereString = "";
             foreach (Laaner laaner in laanere)
             {
-                laanereString += $"Lånernummer: {laaner.laanerNummer} - Navn: {laaner.navn} er låner hos {biblioteksNavn}";
+                laanereString += $"Lånernummer: {laaner.laanerNummer} - Navn: {laaner.navn} er låner hos {biblioteksNavn}\n";
             }
             return laanereString;
         }

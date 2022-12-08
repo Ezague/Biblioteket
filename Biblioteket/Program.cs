@@ -14,7 +14,7 @@
                 Console.WriteLine("Du kan vælge følgende:");
                 Console.WriteLine("v: Vis biblioteket navn og dato");
                 Console.WriteLine("o: Opret låner");
-                Console.WriteLine("u: Udskrive lånere");
+                Console.WriteLine("u: Udskriv alle lånere");
                 Console.WriteLine("x: Afslut");
                 Console.WriteLine("-------------------");
 
@@ -47,8 +47,20 @@
                             }
                             else
                             {
-                                Console.WriteLine(bibliotek.OpretLaaner(ID, laanerNavn));
-                                Console.WriteLine("Låner oprettet");
+                                Console.WriteLine("Indtast låner email:");
+                                string? laanerEmail = Console.ReadLine();
+                                if (string.IsNullOrWhiteSpace(laanerEmail))
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Du skal indtaste en email");
+                                    Thread.Sleep(3000);
+                                }
+                                else
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine(bibliotek.OpretLaaner(ID, laanerNavn, laanerEmail));
+                                    Console.WriteLine("Låner oprettet");
+                                }
                             }
                         }
                         Thread.Sleep(3000);
