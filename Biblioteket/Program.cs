@@ -15,6 +15,7 @@
                 Console.WriteLine("v: Vis biblioteket navn og dato");
                 Console.WriteLine("o: Opret låner");
                 Console.WriteLine("u: Udskriv alle lånere");
+                Console.WriteLine("f: Udskriv specifik låner");
                 Console.WriteLine("x: Afslut");
                 Console.WriteLine("-------------------");
 
@@ -76,6 +77,22 @@
                         }
                         Console.WriteLine(bibliotek.HentAlleLaanere());
                         Thread.Sleep(3000);
+                        break;
+                    case ConsoleKey.F:
+                        Console.WriteLine("Indtast låner nummer:");
+                        int laanerID;
+                        if (!int.TryParse(Console.ReadLine(), out laanerID))
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Du skal indtaste et tal");
+                            Thread.Sleep(3000);
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine(bibliotek.HentLaaner(laanerID));
+                            Thread.Sleep(3000);
+                        }
                         break;
                     case ConsoleKey.X:
                         afslut = true;

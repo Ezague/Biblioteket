@@ -22,7 +22,6 @@ namespace Biblioteket
             return $"Lånernummer: {laanerNummer} - Navn: {navn} - Email: {email} er oprettet hos {biblioteksNavn}\n";
         }
 
-
         public string HentAlleLaanere()
         {
             string laanereString = "";
@@ -31,6 +30,18 @@ namespace Biblioteket
                 laanereString += $"Lånernummer: {laaner.laanerNummer} - Navn: {laaner.navn} er låner hos {biblioteksNavn}\n";
             }
             return laanereString;
+        }
+
+        public string HentLaaner(int laanerNummer)
+        {
+            foreach (Laaner laaner in laanere)
+            {
+                if (laaner.laanerNummer == laanerNummer)
+                {
+                    return $"Lånernummer: {laaner.laanerNummer} - Navn: {laaner.navn} - Email: {laaner.email} er låner hos {biblioteksNavn}\n";
+                }
+            }
+            return $"Lånernummer: {laanerNummer} findes ikke hos {biblioteksNavn}\n";
         }
 
     }
