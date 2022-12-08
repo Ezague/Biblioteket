@@ -15,9 +15,11 @@ namespace Biblioteket
             return "Velkommen til " + biblioteksNavn + "- datoen idag er: " + DateTime.Now.ToShortDateString();
         }
 
-        public void OpretLaaner(int laanerNummer, string navn)
+        public string OpretLaaner(int laanerNummer, string navn)
         {
-            laanere.Add(new Laaner(laanerNummer, navn));
+            Laaner laaner = new Laaner(laanerNummer, navn);
+            laanere.Add(laaner);
+            return $"Lånernummer: {laanerNummer} - Navn: {navn} er oprettet hos {biblioteksNavn}\n";
         }
 
         public string HentLaaner(int id)
