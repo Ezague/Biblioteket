@@ -8,7 +8,7 @@ public class UnitTest1
         //Arrange
         Biblioteket.Bibliotek MitBib = new Biblioteket.Bibliotek("bonk");
 
-        Biblioteket.Laaner MinLaaner = new Biblioteket.Laaner(1, "Egon");
+        Biblioteket.Laaner MinLaaner = new Biblioteket.Laaner(1, "Egon", "test@mail.dk");
 
         string expected = "Egon";
 
